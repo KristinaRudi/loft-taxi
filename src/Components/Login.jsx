@@ -1,55 +1,48 @@
 import React from "react";
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
 import '../../src/Styles/login.css';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& .MuiTextField-root': {
-      margin: theme.spacing(1),
-      width: '25ch',
-    
-    },
-  },
-}));
-
-function MultilineTextFields() {
-  const classes = useStyles();
-  const [value, setValue] = React.useState('Controlled');
-
-  const handleChange = (event) => {
-    setValue(event.target.value)
-  };
-};
 
 
 export class Login extends React.Component {
+  state = { Name: "", Password: "" };
+
   handleSubmit = event => {
     event.preventDefault();
+    // Предотвращаем перезагрузку страницы
+    console.log(this.state.Name);
+    console.log(this.state.Password);
+  };
 
-    // // Запрещаем перезагрузку страницы
-    // const firstName = event.target.firstName.value;
-    // const lastName = event.target.lastName.value;
-    // console.log(firstName, lastName);
-    // // Делаем что-то с данными...
-  }
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
   render() {
+    const { Name, Password } = this.state;
     return (
       // <form> action="/login" method="post"
       <div className="wrapper__form">
-        <form>
+        <form onSubmit={this.handleSubmit}>
+          <input type="submit" value="Войти" />
           <div className="enter">Войти</div>
           <TextField className="formbutton"
             id="standard-textarea"
+            type="text"
             label="Имя пользователя*"
+            name="Name"
+            value={Name}
             placeholder="mail@mail.ru"
             multiline
+            onChange={this.handleChange}
           />
           <TextField className="formbutton"
             id="standard-textarea"
             label="Пароль*"
+            name="Password"
+            value={Password}
             placeholder="*********"
             multiline
+            onChange={this.handleChange}
           />
           <a href="google.com" className="forgotpass">Забыли пароль?</a>
           <button name="submit" className="button">Войти</button>
