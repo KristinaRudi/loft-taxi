@@ -5,8 +5,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import '../../src/Styles/header.css';
-
-
 import logo from "../../src/img/logo/logo-header.png"
 
 const useStyles = makeStyles((theme) => ({

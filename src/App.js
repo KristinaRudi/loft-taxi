@@ -3,8 +3,8 @@ import { Login } from './Components/Login';
 import { Checkin } from './Components/Checkin';
 import { Map } from './Components/Map';
 import { Profile } from './Components/Profile';
-import  Header  from './Components/Header';
-import ToDoList  from './Components/ToDoList';
+import Header from './Components/Header';
+import ToDoList from './Components/ToDoList';
 import './App.css';
 
 const PAGES = {
@@ -25,10 +25,9 @@ class App extends React.Component {
   render() {
     return (
       <>
-    
-       <Login />
+        <Login />
       </>
-     
+
     );
   }
 }
