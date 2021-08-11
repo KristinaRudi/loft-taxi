@@ -15,8 +15,8 @@ export const Login = (props) => {
     <div className="main-page">
       <Sidebar />
         
-      <Map> {login}</Map>
-     
+      <Map> </Map>
+      {login}
     </div>
   );
 }
