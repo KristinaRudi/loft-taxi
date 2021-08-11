@@ -6,6 +6,8 @@ import { Profile } from './Components/Profile';
 import Header from './Components/Header';
 import ToDoList from './Components/ToDoList';
 import './App.css';
+// import './Styles/main.css';
+// import './Styles/normalize.css';
 
 const PAGES = {
   login: <Login />,

@@ -25,8 +25,8 @@ export class Loginform extends React.Component {
     const { Name, Password } = this.state;
 
     return (
-      <div className="wrapper__form" >
-        <form onSubmit={this.handleSubmit}>
+      <div className="wrapper">
+        <form className="form" onSubmit={this.handleSubmit}>
           {/* <input type="submit" value="Войти" /> */}
           <div className="enter">Войти</div>
           <TextField className="formbutton"

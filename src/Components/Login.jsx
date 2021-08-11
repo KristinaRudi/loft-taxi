@@ -3,25 +3,23 @@ import '../../src/App.css';
 import '../../src/Styles/login.css';
 
 
+
 import Sidebar from '../../src/Components/Sidebar';
 import Map from '../../src/Components/Map';
 import Loginform from '../../src/Components/Loginform';
 
+const login = <Loginform />
 
-export class Login extends React.Component {
-
-
-  render() {
-
-    return (
-      <div className="main-page">
-        <Sidebar />
-        <Map>
-        <Loginform />
-        </Map>
-      </div>
-    );
-  }
+export const Login = (props) => {
+  return (
+    <div className="main-page">
+      <Sidebar />
+        
+      <Map> {login}</Map>
+     
+    </div>
+  );
 }
+
 
 export default Login;

@@ -1,17 +1,18 @@
-.wrapper__form {
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 580px;
- 
-
+  height: 541px;
+  padding: 56px 113px;
 }
 
-form {
+.form {
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 355px;
-  height: 430px;
-
 }
 
 .enter {
