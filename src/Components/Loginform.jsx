@@ -32,7 +32,7 @@ export class Loginform extends React.Component {
           <TextField className="formbutton"
             id="standard-textarea"
             type="text"
-            label="Имя пользователя*"
+            label="Email"
             name="Name"
             value={Name}
             placeholder="mail@mail.ru"
@@ -41,7 +41,7 @@ export class Loginform extends React.Component {
           />
           <TextField className="formbutton"
             id="standard-textarea"
-            label="Пароль*"
+            label="Пароль"
             name="Password"
             value={Password}
             placeholder="*********"

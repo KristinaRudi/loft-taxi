@@ -2,23 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
   width: 580px;
   height: 541px;
   padding: 56px 113px;
+  border-radius: 20px;
+
 }
 
 .form {
-  background-color: white;
+  background-color: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 355px;
+  /* width: 355px; */
 }
 
 .enter {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
+  margin-bottom: 95px;
 }
 
 .formbutton {
@@ -31,6 +35,7 @@
   text-align: end;
   font-size: 16px;
   color: #828282;
+  margin-bottom: 46px;
 }
 
 .button {
@@ -41,6 +46,7 @@
   font-size: 25px;
   border: none;
   cursor: pointer;
+  margin-bottom: 33px;
 }
 
 .new__user {
@@ -49,4 +55,5 @@
 
 .registration__link {
   color: #fdbf5a;
+  margin-left: 8px;
 }
