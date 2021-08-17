@@ -18,7 +18,7 @@ const PAGES = {
 
 class App extends React.Component {
 
-  state = { currentPage: "home" }
+  state = { currentPage: " login" }
 
   navigateTo = (page) => { //принимаем новое значение страницы через аргументы
     this.setState({ currentPage: page });
@@ -27,9 +27,50 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Login />
+        <header>
+          <nav>
+            <ul>
+              <li>
+                <button onClick={() => {
+                  this.navigateTo("login");
+                }}
+                >
+                  Login
+                </button>
+              </li>
+              <li>
+                <button onClick={() => {
+                  this.navigateTo("checkin");
+                }}
+                >
+                  Checkin
+                </button>
+              </li>
+              <li>
+                <button onClick={() => {
+                  this.navigateTo("map");
+                }}
+                >
+                  Map
+                </button>
+              </li>
+              <li>
+                <button onClick={() => {
+                  this.navigateTo("profile");
+                }}
+                >
+                  Profile
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <section>
+            {PAGES[this.state.currentPage]}
+          </section>
+        </main>
       </>
-
     );
   }
 }

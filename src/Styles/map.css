@@ -1,11 +1,13 @@
 .map-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   height: 100%;
   width: 100%;
-  background-image: url("../img/map-one.jpg");
-  background-repeat: no-repeat;
-  background-position: center, center;
-  background-size: cover;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
